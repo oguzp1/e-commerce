@@ -2,6 +2,7 @@ package com.generalmobile.ecommerce;
 
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
@@ -27,5 +28,6 @@ public class Screen13Activity extends BaseActivity {
         createMenu(toolbar, layout13);
 
         recyclerView13.setAdapter(new CustomAdapter13());
+        recyclerView13.setLayoutManager(new LinearLayoutManager(this));
     }
 }

@@ -4,7 +4,6 @@
     android:id="@+id/layout13"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
     tools:context="com.generalmobile.ecommerce.Screen13Activity">
 
     <LinearLayout
@@ -31,6 +30,13 @@
             android:backgroundTint="@color/checkoutButtonBackground"
             android:text="@string/checkout_button"
             android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
     </LinearLayout>
 
     <include

@@ -14,7 +14,9 @@
             android:id="@+id/product_image13"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:layout_marginRight="10dp" />
+            android:layout_marginRight="10dp"
+            android:background="#BBBFC4"
+            android:src="@drawable/mountains" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -52,6 +54,7 @@
             android:src="@drawable/ic_keyboard_arrow_down_black_24dp" />
 
         <TextView
+            android:id="@+id/product_amount13"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginLeft="@dimen/spacing_medium"
