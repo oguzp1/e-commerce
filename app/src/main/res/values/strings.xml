@@ -7,5 +7,8 @@
     <string name="search">Search</string>
     <string name="shopping_cart">Shopping Cart</string>
     <string name="subheader">Subheader</string>
-    <string name="checkout_button">BUTTON</string>
+    <string name="checkout_button">PROCEED TO CHECKOUT</string>
+    <string name="default_product_name">Product</string>
+    <string name="default_product_price">$ 100</string>
+    <string name="default_product_quantity">1</string>
 </resources>

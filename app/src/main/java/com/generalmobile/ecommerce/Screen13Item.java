@@ -5,12 +5,31 @@ package com.generalmobile.ecommerce;
  */
 
 public class Screen13Item {
-    private String imgSrc;
-    private String productName;
-    private String productPrice;
+    private int imgSrc;
+    private int productName;
+    private int productPrice;
     private int itemsOrdered;
 
     public Screen13Item() {
+        imgSrc = R.drawable.mountains;
+        productName = R.string.default_product_name;
+        productPrice = 100;
+        itemsOrdered = R.string.default_product_quantity;
+    }
 
+    public int getImgSrc() {
+        return imgSrc;
+    }
+
+    public int getProductName() {
+        return productName;
+    }
+
+    public int getProductPrice() {
+        return productPrice;
+    }
+
+    public int getItemsOrdered() {
+        return itemsOrdered;
     }
 }
