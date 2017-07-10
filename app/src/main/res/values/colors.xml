@@ -8,4 +8,6 @@
     <color name="drawerSubheaderColor">#8A000000</color>
     <color name="drawerNameColor">#FFFFFF</color>
     <color name="drawerEmailColor">#FFFFFF</color>
+
+    <color name="checkoutButtonBackground">#FF5252</color>
 </resources>
