@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Screen13Activity"></activity>
+        <activity android:name=".Screen14Activity" />
     </application>
 
 </manifest>

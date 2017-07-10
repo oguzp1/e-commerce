@@ -37,7 +37,7 @@ public class CustomAdapter14 extends RecyclerView.Adapter<CustomAdapter14.ViewHo
 
     @Override
     public void onBindViewHolder(CustomAdapter14.ViewHolder holder, int position) {
-    holder.imageView.setImageResource(R.mipmap.ic_launcher);
+    holder.imageView.setImageResource(R.drawable.mountains);
 
     }
 

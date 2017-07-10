@@ -25,7 +25,7 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         createMenu(toolbar, drawerLayout);
-        Intent i = new Intent(this, Screen13Activity.class);
+        Intent i = new Intent(this, Screen14Activity.class);
         startActivity(i);
     }
 }
