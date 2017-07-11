@@ -1,4 +1,4 @@
-package com.generalmobile.ecommerce;
+package com.generalmobile.ecommerce.screens.screen13;
 
 /**
  * Created by MONSTER on 10.7.2017.

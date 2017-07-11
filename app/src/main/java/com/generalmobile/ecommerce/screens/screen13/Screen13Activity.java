@@ -1,4 +1,4 @@
-package com.generalmobile.ecommerce;
+package com.generalmobile.ecommerce.screens.screen13;
 
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
@@ -6,6 +6,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
+import com.generalmobile.ecommerce.BaseActivity;
+import com.generalmobile.ecommerce.R;
 import com.generalmobile.ecommerce.adapters.CustomAdapter13;
 
 import butterknife.BindView;

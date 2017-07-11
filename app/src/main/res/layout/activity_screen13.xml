@@ -4,7 +4,7 @@
     android:id="@+id/layout13"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.generalmobile.ecommerce.Screen13Activity">
+    tools:context="com.generalmobile.ecommerce.screens.screen13.Screen13Activity">
 
     <LinearLayout
         android:layout_width="match_parent"

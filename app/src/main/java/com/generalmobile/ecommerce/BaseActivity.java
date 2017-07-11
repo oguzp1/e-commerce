@@ -35,7 +35,7 @@ public class BaseActivity extends AppCompatActivity {
                 R.string.drawer_open,
                 R.string.drawer_close);
 
-        drawerLayout.setDrawerListener(actionBarDrawerToggle);
+        drawerLayout.addDrawerListener(actionBarDrawerToggle);
     }
 
     @Override
