@@ -1,10 +1,9 @@
 package com.generalmobile.ecommerce;
 
 import android.os.Bundle;
-import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
 
 import com.generalmobile.ecommerce.adapters.CustomAdapter13;
@@ -15,12 +14,8 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class Screen13Activity extends BaseActivity {
+public class Screen13Activity extends AppCompatActivity {
 
-    @BindView(R.id.toolbar)
-    Toolbar toolbar;
-    @BindView(R.id.layout13)
-    DrawerLayout layout13;
     @BindView(R.id.recycler_view13)
     RecyclerView recyclerView13;
     @BindView(R.id.total_price13)
@@ -33,7 +28,6 @@ public class Screen13Activity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen13);
         ButterKnife.bind(this);
-        createMenu(toolbar, layout13);
 
         List<Screen13Item> itemList = new ArrayList<>();
         itemList.add(new Screen13Item());
