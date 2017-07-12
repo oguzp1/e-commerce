@@ -29,7 +29,7 @@ public class Screen14Presenter implements ApiListener {
 
 
     @Override
-    public void onFinish(List<String> categories, List<AtomicInteger> freqData, List<Product> products) {
-        screen14View.resetAdapter(categories, freqData, products);
+    public void onFinish(List<Product> products) {
+        screen14View.resetAdapter(products);
     }
 }

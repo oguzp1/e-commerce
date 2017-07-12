@@ -1,6 +1,8 @@
 package com.generalmobile.ecommerce.service;
 
+import com.generalmobile.ecommerce.Category;
 import com.generalmobile.ecommerce.Product;
+import com.generalmobile.ecommerce.Subcategory;
 
 import java.util.List;
 
@@ -12,6 +14,12 @@ import retrofit2.http.GET;
  */
 
 public interface UserAPIService {
-    @GET("/feeds/flowers.json")
+    @GET("/Product")
     Call<List<Product>> getProducts();
+
+    @GET("/Category")
+    Call<List<Category>> getCategories();
+
+    @GET("/SubCategory")
+    Call<List<Subcategory>> getSubcategories();
 }

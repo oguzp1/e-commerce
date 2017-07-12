@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.generalmobile.ecommerce.Category;
 import com.generalmobile.ecommerce.Product;
 import com.generalmobile.ecommerce.R;
 import com.generalmobile.ecommerce.di.NetModule;
@@ -22,16 +23,15 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class CustomAdapter14 extends RecyclerView.Adapter<CustomAdapter14.ViewHolder> {
-    private List<String> categories;
-    private List<AtomicInteger> categoryFreq;
+
+    private List<Category> categories;
+
     private List<Product> products;
 
 
 
-    public CustomAdapter14(List<String> categories, List<AtomicInteger> categoryFreq, List<Product> products) {
+    public CustomAdapter14(List<Category> categories, List<Product> products) {
         this.categories = categories;
-        this.categoryFreq = categoryFreq;
-
         this.products = products;
     }
 
@@ -49,15 +49,16 @@ public class CustomAdapter14 extends RecyclerView.Adapter<CustomAdapter14.ViewHo
 
     @Override
     public void onBindViewHolder(CustomAdapter14.ViewHolder holder, int position) {
+        final Category category = categories.get(position);
         final Product product = products.get(position);
-        final String category = categories.get(position);
+        /*final String category = categories.get(position);
         final AtomicInteger categoryFrequency = categoryFreq.get(position);
 
         holder.title.setText(category);
-        holder.content.setText(categoryFrequency + " items");
+        holder.content.setText(categoryFrequency + " items");*/
 
         Picasso.with(holder.itemView.getContext())
-                .load(NetModule.BASE_URL + "/photos/" + product.getPhotoDir())
+                .load(product.getImageUrl())
                 .fit()
                 .centerCrop()
                 .into(holder.imageView);
@@ -65,7 +66,7 @@ public class CustomAdapter14 extends RecyclerView.Adapter<CustomAdapter14.ViewHo
 
     @Override
     public int getItemCount() {
-        return categories.size();
+        return products.size();
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {

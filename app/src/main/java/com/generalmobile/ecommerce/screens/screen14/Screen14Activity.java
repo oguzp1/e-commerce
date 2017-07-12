@@ -12,17 +12,14 @@ import com.generalmobile.ecommerce.Product;
 import com.generalmobile.ecommerce.R;
 import com.generalmobile.ecommerce.adapters.CustomAdapter14;
 
-import java.util.Collection;
 import java.util.List;
-import java.util.Set;
-import java.util.concurrent.atomic.AtomicInteger;
 
 import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class Screen14Activity extends BaseActivity implements Screen14View{
+public class Screen14Activity extends BaseActivity implements Screen14View {
 
     @BindView(R.id.recycler_view)
     RecyclerView recyclerView;
@@ -44,7 +41,7 @@ public class Screen14Activity extends BaseActivity implements Screen14View{
         createMenu(toolbar, drawerLayout);
 
         DaggerScreen14Component.builder()
-                .appComponent(((MainApplication)getApplication()).getAppComponent())
+                .appComponent(((MainApplication) getApplication()).getAppComponent())
                 .screen14Module(new Screen14Module(this))
                 .build()
                 .inject(this);
@@ -56,7 +53,7 @@ public class Screen14Activity extends BaseActivity implements Screen14View{
 
 
     @Override
-    public void resetAdapter(List<String> categories, List<AtomicInteger> freqData, List<Product> products) {
-        recyclerView.setAdapter(new CustomAdapter14(categories, freqData, products));
+    public void resetAdapter(List<Product> products) {
+        recyclerView.setAdapter(new CustomAdapter14(products, categories));// FIXME: 12.07.2017 
     }
 }

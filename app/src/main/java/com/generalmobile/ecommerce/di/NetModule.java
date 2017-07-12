@@ -19,7 +19,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 @Module
 public class NetModule {
-    public final static String BASE_URL = "http://services.hanselandpetal.com";
+    public final static String BASE_URL = "http://10.17.0.131:3000";
 
     @Singleton
     @Provides

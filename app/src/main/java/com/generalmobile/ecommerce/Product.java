@@ -9,154 +9,150 @@ import org.greenrobot.greendao.annotation.NotNull;
 import org.greenrobot.greendao.annotation.Property;
 import org.greenrobot.greendao.annotation.Generated;
 
+
 /**
  * Created by btstajyer7 on 11.07.2017.
  */
 
 @Entity
 public class Product {
+    @Id
     @Expose
-    @SerializedName("name")
-    private String productName;
-
+    private Long id;
+    @Expose
+    private String name;
+    @Expose
     @Property(nameInDb = "PRICE")
     @NotNull
+    private double price;
     @Expose
-    @SerializedName("price")
-    private double productPrice;
-
-    private double productRating;
-
-    @Property(nameInDb = "INSTRUCTIONS")
+    private Long subCategoryId;
     @Expose
-    @SerializedName("instructions")
-    private String productDescription;
-
-    private String productTypeVariant;
-
-    private String productColorVariant;
-
+    private Long categoryId;
     @Expose
-    @SerializedName("category")
-    private String productCategory;
-
-    private String productSubcategory;
-
+    @NotNull
+    private double rate;
     @Expose
-    @SerializedName("photo")
-    private String photoDir;
+    private String content;
+    @Expose
+    @Property(nameInDb = "REVIEW")
+    @NotNull
+    private int review;
+    @Expose
+    @Property(nameInDb = "TYPE_VARIANT")
+    private String typeVariant;
+    @Expose
+    @Property(nameInDb = "COLOR_VARIANT")
+    private String colorVariant;
+    @Expose
+    private String imageUrl;
 
-    @Id(autoincrement = true)
-    private Long productID;
-
-    @Generated(hash = 38030855)
-    public Product(String productName, double productPrice, double productRating,
-            String productDescription, String productTypeVariant,
-            String productColorVariant, String productCategory,
-            String productSubcategory, String photoDir, Long productID) {
-        this.productName = productName;
-        this.productPrice = productPrice;
-        this.productRating = productRating;
-        this.productDescription = productDescription;
-        this.productTypeVariant = productTypeVariant;
-        this.productColorVariant = productColorVariant;
-        this.productCategory = productCategory;
-        this.productSubcategory = productSubcategory;
-        this.photoDir = photoDir;
-        this.productID = productID;
+    @Generated(hash = 248932983)
+    public Product(Long id, String name, double price, Long subCategoryId,
+                   Long categoryId, double rate, String content, int review,
+                   String typeVariant, String colorVariant, String imageUrl) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.subCategoryId = subCategoryId;
+        this.categoryId = categoryId;
+        this.rate = rate;
+        this.content = content;
+        this.review = review;
+        this.typeVariant = typeVariant;
+        this.colorVariant = colorVariant;
+        this.imageUrl = imageUrl;
     }
 
     @Generated(hash = 1890278724)
     public Product() {
     }
 
-    public String getProductName() {
-        return this.productName;
+    public Long getId() {
+        return this.id;
     }
 
-    public void setProductName(String productName) {
-        this.productName = productName;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public double getProductPrice() {
-        return this.productPrice;
+    public String getName() {
+        return this.name;
     }
 
-    public void setProductPrice(double productPrice) {
-        this.productPrice = productPrice;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public double getProductRating() {
-        return this.productRating;
+    public double getPrice() {
+        return this.price;
     }
 
-    public void setProductRating(double productRating) {
-        this.productRating = productRating;
+    public void setPrice(double price) {
+        this.price = price;
     }
 
-    public String getProductDescription() {
-        return this.productDescription;
+    public Long getSubCategoryId() {
+        return this.subCategoryId;
     }
 
-    public void setProductDescription(String productDescription) {
-        this.productDescription = productDescription;
+    public void setSubCategoryId(Long subCategoryId) {
+        this.subCategoryId = subCategoryId;
     }
 
-    public String getProductTypeVariant() {
-        return this.productTypeVariant;
+    public Long getCategoryId() {
+        return this.categoryId;
     }
 
-    public void setProductTypeVariant(String productTypeVariant) {
-        this.productTypeVariant = productTypeVariant;
+    public void setCategoryId(Long categoryId) {
+        this.categoryId = categoryId;
     }
 
-    public String getProductColorVariant() {
-        return this.productColorVariant;
+    public double getRate() {
+        return this.rate;
     }
 
-    public void setProductColorVariant(String productColorVariant) {
-        this.productColorVariant = productColorVariant;
+    public void setRate(double rate) {
+        this.rate = rate;
     }
 
-    public String getProductCategory() {
-        return this.productCategory;
+    public String getContent() {
+        return this.content;
     }
 
-    public void setProductCategory(String productCategory) {
-        this.productCategory = productCategory;
+    public void setContent(String content) {
+        this.content = content;
     }
 
-    public String getProductSubcategory() {
-        return this.productSubcategory;
+    public int getReview() {
+        return this.review;
     }
 
-    public void setProductSubcategory(String productSubcategory) {
-        this.productSubcategory = productSubcategory;
+    public void setReview(int review) {
+        this.review = review;
     }
 
-    public String getPhotoDir() {
-        return this.photoDir;
+    public String getTypeVariant() {
+        return this.typeVariant;
     }
 
-    public void setPhotoDir(String photoDir) {
-        this.photoDir = photoDir;
+    public void setTypeVariant(String typeVariant) {
+        this.typeVariant = typeVariant;
     }
 
-    public Long getProductID() {
-        return this.productID;
+    public String getColorVariant() {
+        return this.colorVariant;
     }
 
-    public void setProductID(Long productID) {
-        this.productID = productID;
+    public void setColorVariant(String colorVariant) {
+        this.colorVariant = colorVariant;
     }
 
-    public void fillProduct() {
-        String[] typeVariants = {"A", "B", "C", "D", "E"};
-        String[] colorVariants = {"Red", "Blue", "Yellow", "Green", "Pink", "Purple"};
-        String[] subcategories = {"Small Shrubs", "Medium Shrubs", "Tall Shrubs"};
-        productRating = Math.random() * 5;
-        productTypeVariant = typeVariants[(int) (Math.floor(Math.random() * 5))];
-        productColorVariant = colorVariants[(int) (Math.floor(Math.random() * 6))];
-        productSubcategory = subcategories[(int) (Math.floor(Math.random() * 3))];
+    public String getImageUrl() {
+        return this.imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 }

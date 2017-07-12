@@ -12,5 +12,5 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 
 public interface Screen14View {
-    void resetAdapter(List<String> categories, List<AtomicInteger> freqData, List<Product> products);
+    void resetAdapter(List<Product> products);
 }

@@ -10,5 +10,5 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 
 public interface ApiListener {
-    void onFinish(List<String> categories, List<AtomicInteger> freqData, List<Product> products);
+    void onFinish(List<Product> products);
 }
