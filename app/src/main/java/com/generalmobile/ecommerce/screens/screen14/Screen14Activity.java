@@ -57,7 +57,7 @@ public class Screen14Activity extends BaseActivity implements Screen14View,OnCli
 
     @Override
     public void resetAdapter(List<Category> categories) {
-        recyclerView.setAdapter(new CustomAdapter14(categories,this));// FIXME: 12.07.2017
+        recyclerView.setAdapter(new CustomAdapter14(categories,this));
     }
 
     @Override
