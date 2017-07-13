@@ -2,7 +2,6 @@ package com.generalmobile.ecommerce.di;
 
 import android.content.Context;
 
-
 import com.generalmobile.ecommerce.models.DaoMaster;
 import com.generalmobile.ecommerce.models.DaoSession;
 

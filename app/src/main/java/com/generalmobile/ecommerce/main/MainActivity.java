@@ -8,7 +8,7 @@ import android.support.v7.widget.Toolbar;
 
 import com.generalmobile.ecommerce.BaseActivity;
 import com.generalmobile.ecommerce.R;
-import com.generalmobile.ecommerce.screens.screen14.Screen14Activity;
+import com.generalmobile.ecommerce.screens.screen13.Screen13Activity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -29,7 +29,7 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         createMenu(toolbar, drawerLayout);
-        Intent i = new Intent(this, Screen14Activity.class);
+        Intent i = new Intent(this, Screen13Activity.class);
         startActivity(i);
     }
 }

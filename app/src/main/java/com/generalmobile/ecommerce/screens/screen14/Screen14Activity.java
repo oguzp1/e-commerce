@@ -9,11 +9,10 @@ import android.widget.Toast;
 
 import com.generalmobile.ecommerce.BaseActivity;
 import com.generalmobile.ecommerce.MainApplication;
+import com.generalmobile.ecommerce.R;
 import com.generalmobile.ecommerce.adapters.CustomAdapter14;
 import com.generalmobile.ecommerce.adapters.listeners.OnClickCategory;
 import com.generalmobile.ecommerce.models.Category;
-import com.generalmobile.ecommerce.models.Product;
-import com.generalmobile.ecommerce.R;
 
 import java.util.List;
 
@@ -22,7 +21,7 @@ import javax.inject.Inject;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class Screen14Activity extends BaseActivity implements Screen14View,OnClickCategory {
+public class Screen14Activity extends BaseActivity implements Screen14View, OnClickCategory {
 
     @BindView(R.id.recycler_view)
     RecyclerView recyclerView;
@@ -57,7 +56,7 @@ public class Screen14Activity extends BaseActivity implements Screen14View,OnCli
 
     @Override
     public void resetAdapter(List<Category> categories) {
-        recyclerView.setAdapter(new CustomAdapter14(categories,this));
+        recyclerView.setAdapter(new CustomAdapter14(categories, this));
     }
 
     @Override

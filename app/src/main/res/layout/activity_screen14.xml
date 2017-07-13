@@ -7,15 +7,19 @@
     android:background="#ebedf0"
     android:fitsSystemWindows="true"
     tools:context=".screens.screen14.Screen14Activity">
+
     <include
         android:id="@+id/navigation"
         layout="@layout/navigation_view" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <include
             android:id="@+id/toolbar"
             layout="@layout/toolbar" />
+
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"

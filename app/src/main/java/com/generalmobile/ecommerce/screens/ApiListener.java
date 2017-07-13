@@ -1,7 +1,6 @@
 package com.generalmobile.ecommerce.screens;
 
 import com.generalmobile.ecommerce.models.Category;
-import com.generalmobile.ecommerce.models.Product;
 
 import java.util.List;
 

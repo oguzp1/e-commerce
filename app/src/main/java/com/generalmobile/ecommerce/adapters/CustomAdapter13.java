@@ -1,6 +1,5 @@
 package com.generalmobile.ecommerce.adapters;
 
-import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,9 +8,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.generalmobile.ecommerce.R;
-import com.generalmobile.ecommerce.Screen13Item;
-
-import java.util.List;
 
 /**
  * Created by MONSTER on 10.7.2017.
@@ -19,10 +15,13 @@ import java.util.List;
 
 public class CustomAdapter13 extends RecyclerView.Adapter<CustomAdapter13.ViewHolder> {
 
-    List<Screen13Item> itemList;
+//    List<Screen13Item> itemList;
+//
+//    public CustomAdapter13(List<Screen13Item> itemList) {
+//        this.itemList = itemList;
+//    }
 
-    public CustomAdapter13(List<Screen13Item> itemList) {
-        this.itemList = itemList;
+    public CustomAdapter13() {
     }
 
     @Override
@@ -34,21 +33,21 @@ public class CustomAdapter13 extends RecyclerView.Adapter<CustomAdapter13.ViewHo
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        final Screen13Item currentItem = itemList.get(position);
-
-        holder.productImage.setImageResource(currentItem.getImgSrc());
-        holder.productName.setText(currentItem.getProductName());
-        holder.productPrice.setText("$" + currentItem.getProductPrice());
-        holder.productAmount.setText(currentItem.getItemsOrdered());
-
-        if (holder.productAmount.getText().toString().equals("1"))
-            holder.productDecrease.setColorFilter(Color.rgb(208, 212, 217));
+//        final Screen13Item currentItem = itemList.get(position);
+//
+//        holder.productImage.setImageResource(currentItem.getImgSrc());
+//        holder.productName.setText(currentItem.getProductName());
+//        holder.productPrice.setText("$" + currentItem.getProductPrice());
+//        holder.productAmount.setText(currentItem.getItemsOrdered());
+//
+//        if (holder.productAmount.getText().toString().equals("1"))
+//            holder.productDecrease.setColorFilter(Color.rgb(208, 212, 217));
     }
 
 
     @Override
     public int getItemCount() {
-        return itemList.size();
+        return 4;
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {

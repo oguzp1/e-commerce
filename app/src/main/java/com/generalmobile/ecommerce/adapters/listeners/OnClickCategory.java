@@ -8,5 +8,5 @@ import com.generalmobile.ecommerce.models.Category;
 
 public interface OnClickCategory {
 
-   void onClick(Category category);
+    void onClick(Category category);
 }
