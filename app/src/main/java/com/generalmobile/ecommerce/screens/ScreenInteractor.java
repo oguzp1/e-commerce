@@ -1,7 +1,8 @@
 package com.generalmobile.ecommerce.screens;
 
-import com.generalmobile.ecommerce.DaoSession;
+
 import com.generalmobile.ecommerce.models.Category;
+import com.generalmobile.ecommerce.models.DaoSession;
 import com.generalmobile.ecommerce.service.UserAPIService;
 
 import java.util.ArrayList;

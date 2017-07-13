@@ -2,8 +2,9 @@ package com.generalmobile.ecommerce.di;
 
 import android.content.Context;
 
-import com.generalmobile.ecommerce.DaoMaster;
-import com.generalmobile.ecommerce.DaoSession;
+
+import com.generalmobile.ecommerce.models.DaoMaster;
+import com.generalmobile.ecommerce.models.DaoSession;
 
 import org.greenrobot.greendao.database.Database;
 
