@@ -1,9 +1,10 @@
 package com.generalmobile.ecommerce.screens.screen14;
 
-import com.generalmobile.ecommerce.Product;
+import com.generalmobile.ecommerce.models.Category;
+import com.generalmobile.ecommerce.screens.ApiListener;
+import com.generalmobile.ecommerce.screens.ScreenInteractor;
 
 import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
 
 import javax.inject.Inject;
 
@@ -29,7 +30,7 @@ public class Screen14Presenter implements ApiListener {
 
 
     @Override
-    public void onFinish(List<Product> products) {
-        screen14View.resetAdapter(products);
+    public void onFinish(List<Category> categories) {
+        screen14View.resetAdapter(categories);
     }
 }

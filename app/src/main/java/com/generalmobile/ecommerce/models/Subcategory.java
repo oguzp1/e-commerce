@@ -1,4 +1,4 @@
-package com.generalmobile.ecommerce;
+package com.generalmobile.ecommerce.models;
 
 import com.google.gson.annotations.Expose;
 
@@ -11,25 +11,24 @@ import org.greenrobot.greendao.annotation.Generated;
  */
 
 @Entity
-public class Category {
+public class Subcategory {
     @Expose
     @Id
     private Long id;
     @Expose
     private String name;
     @Expose
-    private int productCount;
+    private Long categoryId;
 
-
-    @Generated(hash = 348827373)
-    public Category(Long id, String name, int productCount) {
+    @Generated(hash = 116531778)
+    public Subcategory(Long id, String name, Long categoryId) {
         this.id = id;
         this.name = name;
-        this.productCount = productCount;
+        this.categoryId = categoryId;
     }
 
-    @Generated(hash = 1150634039)
-    public Category() {
+    @Generated(hash = 1953416725)
+    public Subcategory() {
     }
 
     public Long getId() {
@@ -48,11 +47,12 @@ public class Category {
         this.name = name;
     }
 
-    public int getProductCount() {
-        return this.productCount;
+    public Long getCategoryId() {
+        return this.categoryId;
     }
 
-    public void setProductCount(int productCount) {
-        this.productCount = productCount;
+    public void setCategoryId(Long categoryId) {
+        this.categoryId = categoryId;
     }
+
 }

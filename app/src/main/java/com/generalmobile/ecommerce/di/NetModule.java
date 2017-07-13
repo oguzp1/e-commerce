@@ -1,15 +1,11 @@
 package com.generalmobile.ecommerce.di;
 
-import com.generalmobile.ecommerce.Product;
 import com.generalmobile.ecommerce.service.UserAPIService;
-
-import java.util.List;
 
 import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
-import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 

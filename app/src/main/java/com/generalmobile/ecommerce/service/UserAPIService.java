@@ -1,8 +1,8 @@
 package com.generalmobile.ecommerce.service;
 
-import com.generalmobile.ecommerce.Category;
-import com.generalmobile.ecommerce.Product;
-import com.generalmobile.ecommerce.Subcategory;
+import com.generalmobile.ecommerce.models.Category;
+import com.generalmobile.ecommerce.models.Product;
+import com.generalmobile.ecommerce.models.Subcategory;
 
 import java.util.List;
 

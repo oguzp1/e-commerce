@@ -1,4 +1,4 @@
-package com.generalmobile.ecommerce;
+package com.generalmobile.ecommerce.models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
