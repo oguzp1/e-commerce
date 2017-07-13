@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Screen9Activity"></activity>
+        <activity android:name=".Screen9Activity" />
+        <activity android:name=".screens.screen4.Screen4Activity"></activity>
     </application>
 
 </manifest>

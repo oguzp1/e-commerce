@@ -22,7 +22,7 @@
             android:layout_height="match_parent"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:src="@drawable/mountains" />
+            android:src="@drawable/mountains_x" />
 
         <RelativeLayout
             android:id="@+id/subRelativeLayout14"

@@ -6,6 +6,8 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.widget.Toolbar;
 
+import com.generalmobile.ecommerce.screens.screen4.Screen4Activity;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -25,7 +27,7 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         createMenu(toolbar, drawerLayout);
-        Intent intent=new Intent(this,Screen9Activity.class);
+        Intent intent=new Intent(this,Screen4Activity.class);
         startActivity(intent);
     }
 }
