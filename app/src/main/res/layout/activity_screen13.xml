@@ -4,79 +4,44 @@
     android:id="@+id/layout13"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="@dimen/spacing_large"
-    tools:context="com.generalmobile.ecommerce.Screen13Activity">
+    tools:context="com.generalmobile.ecommerce.screens.screen13.Screen13Activity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler_view13"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"></android.support.v7.widget.RecyclerView>
 
-        <RelativeLayout
+        <Button
+            android:id="@+id/checkout_button"
+            style="@style/Base.TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
             android:layout_width="match_parent"
-            android:layout_height="240dp"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_large"
+            android:backgroundTint="@color/checkoutButtonBackground"
+            android:text="@string/checkout_button"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
 
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/spacing_large"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="10dp"
-                    android:gravity="center_vertical"
-                    android:minHeight="48dp"
-                    android:minWidth="48dp"
-                    android:text="Total"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:id="@+id/total_price13"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="$ 0"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textColor="@color/checkoutButtonBackground" />
-
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1" />
-
-                <TextView
-                    android:id="@+id/total_items13"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="0 items"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-
-            </LinearLayout>
-
-            <Button
-                android:id="@+id/checkout_button"
-                style="@style/Base.TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-
-                android:layout_margin="@dimen/spacing_large"
-                android:backgroundTint="@color/checkoutButtonBackground"
-                android:text="@string/checkout_button"
-                android:textColor="@android:color/white" />
-        </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
     </LinearLayout>
+
+    <include
+        android:id="@+id/navigation"
+        layout="@layout/navigation_view" />
+
 
 </android.support.v4.widget.DrawerLayout>
