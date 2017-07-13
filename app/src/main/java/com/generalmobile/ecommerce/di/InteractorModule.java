@@ -1,5 +1,6 @@
 package com.generalmobile.ecommerce.di;
 
+
 import com.generalmobile.ecommerce.models.DaoSession;
 import com.generalmobile.ecommerce.screens.ScreenInteractor;
 import com.generalmobile.ecommerce.service.UserAPIService;
