@@ -45,6 +45,7 @@ public class Product {
     @Property(nameInDb = "COLOR_VARIANT")
     private String colorVariant;
     @Expose
+    @Property(nameInDb = "IMAGE_URL")
     private String imageUrl;
 
     @Generated(hash = 248932983)

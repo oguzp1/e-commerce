@@ -5,6 +5,7 @@ import com.google.gson.annotations.Expose;
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.Generated;
+import org.greenrobot.greendao.annotation.Property;
 
 /**
  * Created by btstajyer7 on 12.07.2017.
@@ -20,6 +21,7 @@ public class Category {
     @Expose
     private int productCount;
     @Expose
+    @Property(nameInDb = "IMAGE_URL")
     private String imageUrl;
 
     @Generated(hash = 793674817)
