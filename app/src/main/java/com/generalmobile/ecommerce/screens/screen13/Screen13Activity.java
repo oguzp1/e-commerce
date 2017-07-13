@@ -8,7 +8,7 @@ import android.support.v7.widget.Toolbar;
 
 import com.generalmobile.ecommerce.BaseActivity;
 import com.generalmobile.ecommerce.R;
-import com.generalmobile.ecommerce.adapters.CustomAdapter13;
+
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -29,7 +29,6 @@ public class Screen13Activity extends BaseActivity {
         ButterKnife.bind(this);
         createMenu(toolbar, layout13);
 
-        recyclerView13.setAdapter(new CustomAdapter13());
         recyclerView13.setLayoutManager(new LinearLayoutManager(this));
     }
 }
