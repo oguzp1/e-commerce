@@ -3,6 +3,7 @@ package com.generalmobile.ecommerce.models;
 import com.google.gson.annotations.Expose;
 
 import org.greenrobot.greendao.annotation.Entity;
+import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.Generated;
 import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.Property;
@@ -30,33 +31,40 @@ public class Category {
         this.productCount = productCount;
         this.imageUrl = imageUrl;
     }
+
     @Generated(hash = 1150634039)
     public Category() {
     }
+
     public Long getId() {
         return this.id;
     }
+
     public void setId(Long id) {
         this.id = id;
     }
+
     public String getName() {
         return this.name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
+
     public int getProductCount() {
         return this.productCount;
     }
+
     public void setProductCount(int productCount) {
         this.productCount = productCount;
     }
+
     public String getImageUrl() {
         return this.imageUrl;
     }
+
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
     }
-
-
 }
