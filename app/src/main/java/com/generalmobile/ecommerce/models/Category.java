@@ -1,6 +1,7 @@
 package com.generalmobile.ecommerce.models;
 
 import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Generated;
@@ -15,41 +16,46 @@ import org.greenrobot.greendao.annotation.Property;
 public class Category {
     @Expose
     @Id
-    private Long id;
+    @SerializedName("id")
+    private Long categoryId;
     @Expose
-    private String name;
+    @SerializedName("name")
+    private String categoryName;
     @Expose
+    @SerializedName("productCount")
     private int productCount;
     @Expose
     @Property(nameInDb = "IMAGE_URL")
-    private String imageUrl;
+    @SerializedName("imageUrl")
+    private String catgoryImageUrl;
 
-    @Generated(hash = 793674817)
-    public Category(Long id, String name, int productCount, String imageUrl) {
-        this.id = id;
-        this.name = name;
+    @Generated(hash = 719866306)
+    public Category(Long categoryId, String categoryName, int productCount,
+                    String catgoryImageUrl) {
+        this.categoryId = categoryId;
+        this.categoryName = categoryName;
         this.productCount = productCount;
-        this.imageUrl = imageUrl;
+        this.catgoryImageUrl = catgoryImageUrl;
     }
 
     @Generated(hash = 1150634039)
     public Category() {
     }
 
-    public Long getId() {
-        return this.id;
+    public Long getCategoryId() {
+        return this.categoryId;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setCategoryId(Long categoryId) {
+        this.categoryId = categoryId;
     }
 
-    public String getName() {
-        return this.name;
+    public String getCategoryName() {
+        return this.categoryName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
     }
 
     public int getProductCount() {
@@ -60,11 +66,11 @@ public class Category {
         this.productCount = productCount;
     }
 
-    public String getImageUrl() {
-        return this.imageUrl;
+    public String getCatgoryImageUrl() {
+        return this.catgoryImageUrl;
     }
 
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
+    public void setCatgoryImageUrl(String catgoryImageUrl) {
+        this.catgoryImageUrl = catgoryImageUrl;
     }
 }

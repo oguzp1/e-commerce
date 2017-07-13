@@ -12,10 +12,9 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.generalmobile.ecommerce.R;
 import com.generalmobile.ecommerce.adapters.listeners.OnClickCategory;
 import com.generalmobile.ecommerce.models.Category;
-import com.generalmobile.ecommerce.models.Product;
-import com.generalmobile.ecommerce.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -46,7 +45,7 @@ public class CustomAdapter14 extends RecyclerView.Adapter<CustomAdapter14.ViewHo
     @Override
     public void onBindViewHolder(CustomAdapter14.ViewHolder holder, int position) {
         final Category currentCategory = categories.get(position);
-        holder.title.setText(currentCategory.getName());
+        holder.title.setText(currentCategory.getCategoryName());
         holder.content.setText(currentCategory.getProductCount()+"Products");
         holder.mRelativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,7 +55,7 @@ public class CustomAdapter14 extends RecyclerView.Adapter<CustomAdapter14.ViewHo
         });
 
         Picasso.with(holder.itemView.getContext())
-                .load(currentCategory.getImageUrl())
+                .load(currentCategory.getCatgoryImageUrl())
                 .fit()
                 .centerCrop()
                 .into(holder.imageView);

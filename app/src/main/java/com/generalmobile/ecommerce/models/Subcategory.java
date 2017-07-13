@@ -1,6 +1,7 @@
 package com.generalmobile.ecommerce.models;
 
 import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Generated;
@@ -14,16 +15,20 @@ import org.greenrobot.greendao.annotation.Id;
 public class Subcategory {
     @Expose
     @Id
-    private Long id;
+    @SerializedName("id")
+    private Long subCategoryId;
     @Expose
-    private String name;
+    @SerializedName("name")
+    private String subCategoryName;
     @Expose
+    @SerializedName("categoryId")
     private Long categoryId;
 
-    @Generated(hash = 116531778)
-    public Subcategory(Long id, String name, Long categoryId) {
-        this.id = id;
-        this.name = name;
+    @Generated(hash = 497785927)
+    public Subcategory(Long subCategoryId, String subCategoryName,
+                       Long categoryId) {
+        this.subCategoryId = subCategoryId;
+        this.subCategoryName = subCategoryName;
         this.categoryId = categoryId;
     }
 
@@ -31,20 +36,20 @@ public class Subcategory {
     public Subcategory() {
     }
 
-    public Long getId() {
-        return this.id;
+    public Long getSubCategoryId() {
+        return this.subCategoryId;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setSubCategoryId(Long subCategoryId) {
+        this.subCategoryId = subCategoryId;
     }
 
-    public String getName() {
-        return this.name;
+    public String getSubCategoryName() {
+        return this.subCategoryName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setSubCategoryName(String subCategoryName) {
+        this.subCategoryName = subCategoryName;
     }
 
     public Long getCategoryId() {
@@ -54,6 +59,5 @@ public class Subcategory {
     public void setCategoryId(Long categoryId) {
         this.categoryId = categoryId;
     }
-
 
 }
