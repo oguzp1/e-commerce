@@ -46,6 +46,7 @@ public class Product {
     @Expose
     @Property(nameInDb = "IMAGE_URL")
     private String imageUrl;
+
     @Generated(hash = 248932983)
     public Product(Long id, String name, double price, Long subCategoryId,
                    Long categoryId, double rate, String content, int review,
@@ -62,60 +63,79 @@ public class Product {
         this.colorVariant = colorVariant;
         this.imageUrl = imageUrl;
     }
+
     @Generated(hash = 1890278724)
     public Product() {
     }
+
     public Long getId() {
         return this.id;
     }
+
     public void setId(Long id) {
         this.id = id;
     }
+
     public String getName() {
         return this.name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
+
     public double getPrice() {
         return this.price;
     }
+
     public void setPrice(double price) {
         this.price = price;
     }
+
     public Long getSubCategoryId() {
         return this.subCategoryId;
     }
+
     public void setSubCategoryId(Long subCategoryId) {
         this.subCategoryId = subCategoryId;
     }
+
     public Long getCategoryId() {
         return this.categoryId;
     }
+
     public void setCategoryId(Long categoryId) {
         this.categoryId = categoryId;
     }
+
     public double getRate() {
         return this.rate;
     }
+
     public void setRate(double rate) {
         this.rate = rate;
     }
+
     public String getContent() {
         return this.content;
     }
+
     public void setContent(String content) {
         this.content = content;
     }
+
     public int getReview() {
         return this.review;
     }
+
     public void setReview(int review) {
         this.review = review;
     }
+
     public String getTypeVariant() {
         return this.typeVariant;
     }
+
     public void setTypeVariant(String typeVariant) {
         this.typeVariant = typeVariant;
     }
@@ -123,12 +143,15 @@ public class Product {
     public String getColorVariant() {
         return this.colorVariant;
     }
+
     public void setColorVariant(String colorVariant) {
         this.colorVariant = colorVariant;
     }
+
     public String getImageUrl() {
         return this.imageUrl;
     }
+
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
     }
