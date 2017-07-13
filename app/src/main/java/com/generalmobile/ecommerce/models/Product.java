@@ -1,6 +1,7 @@
 package com.generalmobile.ecommerce.models;
 
 import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Generated;
@@ -17,42 +18,54 @@ import org.greenrobot.greendao.annotation.Property;
 public class Product {
     @Id
     @Expose
-    private Long id;
+    @SerializedName("id")
+    private Long productId;
     @Expose
-    private String name;
+    @SerializedName("name")
+    private String productName;
     @Expose
     @Property(nameInDb = "PRICE")
     @NotNull
+    @SerializedName("price")
     private double price;
     @Expose
+    @SerializedName("subCategoryId")
     private Long subCategoryId;
     @Expose
+    @SerializedName("categoryId")
     private Long categoryId;
     @Expose
     @NotNull
+    @SerializedName("rate")
     private double rate;
     @Expose
+    @SerializedName("content")
     private String content;
     @Expose
     @Property(nameInDb = "REVIEW")
     @NotNull
+    @SerializedName("review")
     private int review;
     @Expose
     @Property(nameInDb = "TYPE_VARIANT")
+    @SerializedName("typeVariant")
     private String typeVariant;
     @Expose
     @Property(nameInDb = "COLOR_VARIANT")
+    @SerializedName("colorVariant")
     private String colorVariant;
     @Expose
     @Property(nameInDb = "IMAGE_URL")
-    private String imageUrl;
+    @SerializedName("imageUrl")
+    private String productImageUrl;
 
-    @Generated(hash = 248932983)
-    public Product(Long id, String name, double price, Long subCategoryId,
-                   Long categoryId, double rate, String content, int review,
-                   String typeVariant, String colorVariant, String imageUrl) {
-        this.id = id;
-        this.name = name;
+    @Generated(hash = 781876997)
+    public Product(Long productId, String productName, double price,
+                   Long subCategoryId, Long categoryId, double rate, String content,
+                   int review, String typeVariant, String colorVariant,
+                   String productImageUrl) {
+        this.productId = productId;
+        this.productName = productName;
         this.price = price;
         this.subCategoryId = subCategoryId;
         this.categoryId = categoryId;
@@ -61,27 +74,27 @@ public class Product {
         this.review = review;
         this.typeVariant = typeVariant;
         this.colorVariant = colorVariant;
-        this.imageUrl = imageUrl;
+        this.productImageUrl = productImageUrl;
     }
 
     @Generated(hash = 1890278724)
     public Product() {
     }
 
-    public Long getId() {
-        return this.id;
+    public Long getProductId() {
+        return this.productId;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setProductId(Long productId) {
+        this.productId = productId;
     }
 
-    public String getName() {
-        return this.name;
+    public String getProductName() {
+        return this.productName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 
     public double getPrice() {
@@ -148,13 +161,12 @@ public class Product {
         this.colorVariant = colorVariant;
     }
 
-    public String getImageUrl() {
-        return this.imageUrl;
+    public String getProductImageUrl() {
+        return this.productImageUrl;
     }
 
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
+    public void setProductImageUrl(String productImageUrl) {
+        this.productImageUrl = productImageUrl;
     }
-
 
 }

@@ -12,10 +12,9 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.generalmobile.ecommerce.R;
 import com.generalmobile.ecommerce.adapters.listeners.OnClickCategory;
 import com.generalmobile.ecommerce.models.Category;
-import com.generalmobile.ecommerce.models.Product;
-import com.generalmobile.ecommerce.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -26,14 +25,14 @@ public class CustomAdapter14 extends RecyclerView.Adapter<CustomAdapter14.ViewHo
     private OnClickCategory onClickCategory;
 
 
-
     public CustomAdapter14(List<Category> categories, OnClickCategory onClickCategory) {
         this.categories = categories;
-        this.onClickCategory=onClickCategory;
+        this.onClickCategory = onClickCategory;
 
     }
 
-    public CustomAdapter14() { }
+    public CustomAdapter14() {
+    }
 
     @Override
     public CustomAdapter14.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -46,8 +45,8 @@ public class CustomAdapter14 extends RecyclerView.Adapter<CustomAdapter14.ViewHo
     @Override
     public void onBindViewHolder(CustomAdapter14.ViewHolder holder, int position) {
         final Category currentCategory = categories.get(position);
-        holder.title.setText(currentCategory.getName());
-        holder.content.setText(currentCategory.getProductCount()+"Products");
+        holder.title.setText(currentCategory.getCategoryName());
+        holder.content.setText(currentCategory.getProductCount() + " Products");
         holder.mRelativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,7 +55,7 @@ public class CustomAdapter14 extends RecyclerView.Adapter<CustomAdapter14.ViewHo
         });
 
         Picasso.with(holder.itemView.getContext())
-                .load(currentCategory.getImageUrl())
+                .load(currentCategory.getCatgoryImageUrl())
                 .fit()
                 .centerCrop()
                 .into(holder.imageView);
@@ -79,7 +78,7 @@ public class CustomAdapter14 extends RecyclerView.Adapter<CustomAdapter14.ViewHo
             this.imageView = (ImageView) itemView.findViewById(R.id.item_image);
             this.title = (TextView) itemView.findViewById(R.id.item_title);
             this.content = (TextView) itemView.findViewById(R.id.item_content);
-            this.mRelativeLayout=(RelativeLayout) itemView.findViewById(R.id.relativeLayout14);
+            this.mRelativeLayout = (RelativeLayout) itemView.findViewById(R.id.relativeLayout14);
         }
     }
 }
