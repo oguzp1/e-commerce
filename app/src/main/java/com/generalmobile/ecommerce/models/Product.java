@@ -169,4 +169,8 @@ public class Product {
         this.productImageUrl = productImageUrl;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        return (obj != null && obj instanceof Product && this.productId.equals(((Product) obj).productId));
+    }
 }

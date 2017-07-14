@@ -60,4 +60,8 @@ public class Subcategory {
         this.categoryId = categoryId;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        return (obj != null && obj instanceof Subcategory && this.subCategoryId.equals(((Subcategory) obj).subCategoryId));
+    }
 }

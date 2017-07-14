@@ -6,9 +6,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
-import com.generalmobile.ecommerce.BaseActivity;
+import com.generalmobile.ecommerce.base.BaseActivity;
 import com.generalmobile.ecommerce.R;
-import com.generalmobile.ecommerce.adapters.CustomAdapter13;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

@@ -1,4 +1,4 @@
-package com.generalmobile.ecommerce.adapters;
+package com.generalmobile.ecommerce.screens.screen13;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;

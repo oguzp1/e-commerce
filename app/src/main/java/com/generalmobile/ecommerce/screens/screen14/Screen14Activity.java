@@ -5,14 +5,13 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.widget.Toast;
 
-import com.generalmobile.ecommerce.BaseActivity;
+import com.generalmobile.ecommerce.base.BaseActivity;
 import com.generalmobile.ecommerce.MainApplication;
-import com.generalmobile.ecommerce.adapters.CustomAdapter14;
-import com.generalmobile.ecommerce.adapters.listeners.OnClickCategory;
+import com.generalmobile.ecommerce.screens.listeners.OnClickCategory;
 import com.generalmobile.ecommerce.models.Category;
-import com.generalmobile.ecommerce.models.Product;
 import com.generalmobile.ecommerce.R;
 
 import java.util.List;
@@ -22,16 +21,16 @@ import javax.inject.Inject;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class Screen14Activity extends BaseActivity implements Screen14View,OnClickCategory {
+public class Screen14Activity extends BaseActivity implements Screen14View, OnClickCategory {
 
     @BindView(R.id.recycler_view)
     RecyclerView recyclerView;
-    RecyclerView.LayoutManager layoutManager;
-    RecyclerView.Adapter adapter;
     @BindView(R.id.toolbar)
     Toolbar toolbar;
     @BindView(R.id.drawer_layout)
     DrawerLayout drawerLayout;
+
+    CustomAdapter14 adapter;
 
     @Inject
     Screen14Presenter screen14Presenter;
@@ -49,19 +48,23 @@ public class Screen14Activity extends BaseActivity implements Screen14View,OnCli
                 .build()
                 .inject(this);
 
-        screen14Presenter.getFeed();
-        layoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutManager);
-    }
 
-
-    @Override
-    public void resetAdapter(List<Category> categories) {
-        recyclerView.setAdapter(new CustomAdapter14(categories,this));
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        screen14Presenter.fetchData();
     }
 
     @Override
-    public void onClick(Category category) {
-        Toast.makeText(this, "Bravo, tebrik ederim........", Toast.LENGTH_SHORT).show();
+    public void adapterHandler(List<Category> categories) {
+        if (adapter == null) {
+            adapter = new CustomAdapter14(this, categories);
+            recyclerView.setAdapter(adapter);
+        } else {
+            adapter.setCategories(categories);
+        }
+    }
+
+    @Override
+    public void onClick(View v, int position) {
+        Toast.makeText(this, String.format("%d inci kategori...", position), Toast.LENGTH_SHORT).show();
     }
 }

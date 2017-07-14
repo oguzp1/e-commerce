@@ -10,5 +10,5 @@ import java.util.List;
  */
 
 public interface Screen14View {
-    void resetAdapter(List<Category> categories);
+    void adapterHandler(List<Category> categories);
 }

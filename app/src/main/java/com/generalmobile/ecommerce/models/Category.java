@@ -73,4 +73,9 @@ public class Category {
     public void setCatgoryImageUrl(String catgoryImageUrl) {
         this.catgoryImageUrl = catgoryImageUrl;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        return (obj != null && obj instanceof Category && this.categoryId.equals(((Category) obj).categoryId));
+    }
 }

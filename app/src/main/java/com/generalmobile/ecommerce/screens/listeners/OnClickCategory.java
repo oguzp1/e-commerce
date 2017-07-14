@@ -1,4 +1,6 @@
-package com.generalmobile.ecommerce.adapters.listeners;
+package com.generalmobile.ecommerce.screens.listeners;
+
+import android.view.View;
 
 import com.generalmobile.ecommerce.models.Category;
 
@@ -8,5 +10,5 @@ import com.generalmobile.ecommerce.models.Category;
 
 public interface OnClickCategory {
 
-   void onClick(Category category);
+   void onClick(View view, int position);
 }

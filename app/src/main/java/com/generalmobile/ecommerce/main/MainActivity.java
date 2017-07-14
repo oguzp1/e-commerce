@@ -6,7 +6,7 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.widget.Toolbar;
 
-import com.generalmobile.ecommerce.BaseActivity;
+import com.generalmobile.ecommerce.base.BaseActivity;
 import com.generalmobile.ecommerce.R;
 import com.generalmobile.ecommerce.screens.screen14.Screen14Activity;
 
