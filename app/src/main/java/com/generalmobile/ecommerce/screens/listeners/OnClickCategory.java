@@ -9,6 +9,5 @@ import com.generalmobile.ecommerce.models.Category;
  */
 
 public interface OnClickCategory {
-
    void onClick(View view, int position);
 }

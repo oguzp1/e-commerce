@@ -31,9 +31,6 @@ public class CustomAdapter14 extends RecyclerView.Adapter<CustomAdapter14.ViewHo
         this.categories = categories;
     }
 
-    public CustomAdapter14() {
-    }
-
     public void setCategories(List<Category> categories) {
         this.categories = categories;
         notifyDataSetChanged();

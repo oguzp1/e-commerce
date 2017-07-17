@@ -1,5 +1,7 @@
 package com.generalmobile.ecommerce.screens.screen14;
 
+import android.database.ContentObserver;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.widget.LinearLayoutManager;
@@ -10,6 +12,8 @@ import android.widget.Toast;
 
 import com.generalmobile.ecommerce.base.BaseActivity;
 import com.generalmobile.ecommerce.MainApplication;
+import com.generalmobile.ecommerce.di.DatabaseModule;
+import com.generalmobile.ecommerce.repo.DBObserver;
 import com.generalmobile.ecommerce.screens.listeners.OnClickCategory;
 import com.generalmobile.ecommerce.models.Category;
 import com.generalmobile.ecommerce.R;
@@ -50,6 +54,7 @@ public class Screen14Activity extends BaseActivity implements Screen14View, OnCl
 
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
         screen14Presenter.fetchData();
     }
 
@@ -61,6 +66,11 @@ public class Screen14Activity extends BaseActivity implements Screen14View, OnCl
         } else {
             adapter.setCategories(categories);
         }
+    }
+
+    @Override
+    public void setObserverForDatabase(DBObserver observerForDatabase) {
+        getContentResolver().registerContentObserver(Uri.parse(String.format("content://com.generalmobile.ecommerce.models/%s", DatabaseModule.DATABASE_NAME)), true, observerForDatabase);
     }
 
     @Override

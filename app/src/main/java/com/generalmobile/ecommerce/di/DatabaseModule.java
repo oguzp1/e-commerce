@@ -19,10 +19,12 @@ import dagger.Provides;
 
 @Module
 public class DatabaseModule {
+    public static final String DATABASE_NAME = "products-db";
+
     @Singleton
     @Provides
     DaoSession provideDaoSession(Context context) {
-        DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(context, "products-db");
+        DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(context, DATABASE_NAME);
         Database db = helper.getWritableDb();
         return new DaoMaster(db).newSession();
     }

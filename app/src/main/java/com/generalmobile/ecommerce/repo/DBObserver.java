@@ -5,7 +5,6 @@ import android.net.Uri;
 import android.os.Handler;
 
 import com.generalmobile.ecommerce.screens.ScreenInteractor;
-import com.generalmobile.ecommerce.screens.listeners.DaoLoader;
 import com.generalmobile.ecommerce.screens.screen14.Screen14Presenter;
 
 /**
@@ -20,17 +19,13 @@ public class DBObserver extends ContentObserver {
         this.dataListener = dataListener;
     }
 
-    public DBObserver() {
-        super(null);
-    }
-
     @Override
     public void onChange(boolean selfChange) {
         dataListener.dataChanged();
         super.onChange(selfChange);
     }
 
-  public interface ChangeObserver{
+    public interface ChangeObserver {
         void dataChanged();
     }
 }

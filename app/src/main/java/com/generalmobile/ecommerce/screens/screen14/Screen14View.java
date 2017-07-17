@@ -2,6 +2,7 @@ package com.generalmobile.ecommerce.screens.screen14;
 
 import com.generalmobile.ecommerce.models.Category;
 import com.generalmobile.ecommerce.models.Product;
+import com.generalmobile.ecommerce.repo.DBObserver;
 
 import java.util.List;
 
@@ -11,4 +12,6 @@ import java.util.List;
 
 public interface Screen14View {
     void adapterHandler(List<Category> categories);
+
+    void setObserverForDatabase(DBObserver observerForDatabase);
 }
